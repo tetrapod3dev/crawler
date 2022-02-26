@@ -77,7 +77,6 @@ def get_products(string, category):
     lis = ul.findAll("li", {"class": "baby-product renew-badge"})  # 각 아이템 추출
 
     products = []
-
     rank = 1
     for item in lis:
         # name
@@ -103,8 +102,8 @@ def get_products(string, category):
                          "구분3": category[2],
                          "구분4": category[3]})
         rank = rank + 1
-    print('[{} 쿠팡 - {} - {} - {} - {}] size = {}'
-          .format(len(products), category[0], category[1], category[2], category[3], len(products)))
+    print('[쿠팡 - {} - {} - {} - {}] size = {}'
+          .format(category[0], category[1], category[2], category[3], len(products)))
     return products
 
 
